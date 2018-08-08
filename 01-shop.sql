@@ -22,8 +22,8 @@ CREATE TABLE IF NOT EXISTS pedidos (
     `id_dealer` smallint(5) unsigned NOT NULL,
     `date` date NOT NULL,
     PRIMARY KEY (`id`),
-    CONSTRAINT `fk_cliente` FOREIGN KEY (`id_customer`) REFERENCES `customers` (`id`) ON UPDATE CASCADE,
-    CONSTRAINT `fk_repartido` FOREIGN KEY (`id_dealer`) REFERENCES `dealers` (`id`) ON UPDATE CASCADE
+    CONSTRAINT `fk_customer` FOREIGN KEY (`id_customer`) REFERENCES `customers` (`id`) ON UPDATE CASCADE,
+    CONSTRAINT `fk_dealer` FOREIGN KEY (`id_dealer`) REFERENCES `dealers` (`id`) ON UPDATE CASCADE
 );
 INSERT INTO customers (name,address,city,cp,country) VALUES ('Barnoe','Camino Desencarregassis','Sevilla',41500,'Spain');
 INSERT INTO customers (name,address,city,cp,country) VALUES ('Chustorry','Calle Assono','Cordoba',42000,'Spain');
