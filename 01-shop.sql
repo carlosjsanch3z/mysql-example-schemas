@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS dealers (
     `hire_date` date NOT NULL,
     PRIMARY KEY (`id`)
 );
-CREATE TABLE IF NOT EXISTS pedidos (
+CREATE TABLE IF NOT EXISTS orders (
 	`id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
     `id_customer` smallint(5) unsigned NOT NULL,
     `id_dealer` smallint(5) unsigned NOT NULL,
@@ -34,8 +34,8 @@ INSERT INTO customers (name,address,city,cp,country) VALUES ('Wilo','Pasadizo Es
 INSERT INTO dealers (name,hire_date) VALUES ('Michael','2017-09-04');
 INSERT INTO dealers (name,hire_date) VALUES ('Celeste','2017-08-12');
 INSERT INTO dealers (name,hire_date) VALUES ('Yulen','2018-03-15');
-INSERT INTO pedidos (id_customer,id_dealer,date) VALUES ('1','1','2017-09-06');
-INSERT INTO pedidos (id_customer,id_dealer,date) VALUES ('2','1','2017-09-10');
-INSERT INTO pedidos (id_customer,id_dealer,date) VALUES ('3','1','2017-09-20');
-INSERT INTO pedidos (id_customer,id_dealer,date) VALUES ('3','2','2017-08-13');
-INSERT INTO pedidos (id_customer,id_dealer,date) VALUES ('2','2','2017-09-01');
+INSERT INTO orders (id_customer,id_dealer,date) VALUES ('1','1','2017-09-06');
+INSERT INTO orders (id_customer,id_dealer,date) VALUES ('2','1','2017-09-10');
+INSERT INTO orders (id_customer,id_dealer,date) VALUES ('3','1','2017-09-20');
+INSERT INTO orders (id_customer,id_dealer,date) VALUES ('3','2','2017-08-13');
+INSERT INTO orders (id_customer,id_dealer,date) VALUES ('2','2','2017-09-01');
